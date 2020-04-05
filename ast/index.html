@@ -1,0 +1,1145 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+      
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
+    
+    
+      
+        <title>Document - Pandoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
+      
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+    
+    
+      
+    
+    
+  </head>
+  
+    <body dir="ltr">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#ast-document-meta-model" tabindex="0" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href=".." title="Pandoc" aria-label="Pandoc" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              Pandoc
+            </span>
+            <span class="md-header-nav__topic">
+              
+                Document
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+<a href="https://github.com/boisgera/pandoc/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    pandoc
+  </div>
+</a>
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href=".." title="Pandoc" class="md-nav__button md-logo">
+      
+        <i class="md-icon"></i>
+      
+    </a>
+    Pandoc
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+<a href="https://github.com/boisgera/pandoc/" title="Go to repository" class="md-source" data-md-source="github">
+  
+    <div class="md-source__icon">
+      <svg viewBox="0 0 24 24" width="24" height="24">
+        <use xlink:href="#__github" width="24" height="24"></use>
+      </svg>
+    </div>
+  
+  <div class="md-source__repository">
+    pandoc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Overview" class="md-nav__link">
+      Overview
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../examples/" title="Examples" class="md-nav__link">
+      Examples
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Document
+      </label>
+    
+    <a href="./" title="Document" class="md-nav__link md-nav__link--active">
+      Document
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#helpers" class="md-nav__link">
+    Helpers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paragraphs" class="md-nav__link">
+    Paragraphs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    Headers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quotations" class="md-nav__link">
+    Quotations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-blocks" class="md-nav__link">
+    Code Blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#line-blocks" class="md-nav__link">
+    Line Blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizontal-rules" class="md-nav__link">
+    Horizontal Rules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline-formatting" class="md-nav__link">
+    Inline Formatting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latex-and-math" class="md-nav__link">
+    LaTeX and Math
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divs-and-spans" class="md-nav__link">
+    Divs and Spans
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#footnotes" class="md-nav__link">
+    Footnotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citations" class="md-nav__link">
+    Citations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../configuration/" title="Configuration" class="md-nav__link">
+      Configuration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../api/" title="API Reference" class="md-nav__link">
+      API Reference
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#helpers" class="md-nav__link">
+    Helpers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#paragraphs" class="md-nav__link">
+    Paragraphs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#headers" class="md-nav__link">
+    Headers
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#quotations" class="md-nav__link">
+    Quotations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-blocks" class="md-nav__link">
+    Code Blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#line-blocks" class="md-nav__link">
+    Line Blocks
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#horizontal-rules" class="md-nav__link">
+    Horizontal Rules
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tables" class="md-nav__link">
+    Tables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline-formatting" class="md-nav__link">
+    Inline Formatting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#latex-and-math" class="md-nav__link">
+    LaTeX and Math
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#html" class="md-nav__link">
+    HTML
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#links" class="md-nav__link">
+    Links
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#images" class="md-nav__link">
+    Images
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#divs-and-spans" class="md-nav__link">
+    Divs and Spans
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#footnotes" class="md-nav__link">
+    Footnotes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#citations" class="md-nav__link">
+    Citations
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#metadata" class="md-nav__link">
+    Metadata
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/boisgera/pandoc/edit/master/mkdocs/ast.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="ast-document-meta-model">AST / Document (Meta-)Model<a class="headerlink" href="#ast-document-meta-model" title="Permanent link">&para;</a></h1>
+<p>Use the new metaclass-based representation to drive an exploration of the
+document model. Link to the proper documentation when needed, or use
+exemple from markdown text to see what every construct is about.</p>
+<p>Explore an existing document or create from scratch?
+First explore, then build from scratch?</p>
+<p>Explain that the person willing to analyze/transform documents has to 
+understand how each (or some of the) document pieces are represented?
+And that it's what we try to do here?</p>
+<hr />
+<pre><code>&gt;&gt;&gt; import pandoc
+&gt;&gt;&gt; from pandoc.types import *
+
+
+&gt;&gt;&gt; text = "Hello, World!"
+&gt;&gt;&gt; doc = pandoc.read(text)
+&gt;&gt;&gt; doc
+Pandoc(Meta({}), [Para([Str('Hello,'), Space(), Str('World!')])])
+</code></pre>
+<p>A document is an instance of the <code>Pandoc</code> class; it has two arguments</p>
+<pre><code>&gt;&gt;&gt; Pandoc
+Pandoc(Meta, [Block])
+</code></pre>
+<p>The first argument, the instance of <code>Meta</code>, represents the document metadata.
+Since in this very simple example there is no metadata, we will ignore it and
+focus on the second argument instead, the document contents, which 
+is a list of blocks:</p>
+<pre><code>&gt;&gt;&gt; blocks = doc[1]
+&gt;&gt;&gt; blocks
+[Para([Str('Hello,'), Space(), Str('World!')])]
+</code></pre>
+<p>Actually, there is a single block here</p>
+<pre><code>&gt;&gt;&gt; len(blocks)
+1
+</code></pre>
+<p>There are several possible types of blocks: headers, paragraphs, lists, etc.</p>
+<pre><code>&gt;&gt;&gt; Block
+Block = Plain([Inline])
+      | Para([Inline])
+      | LineBlock([[Inline]])
+      | CodeBlock(Attr, Text)
+      | RawBlock(Format, Text)
+      | BlockQuote([Block])
+      | OrderedList(ListAttributes, [[Block]])
+      | BulletList([[Block]])
+      | DefinitionList([([Inline], [[Block]])])
+      | Header(Int, Attr, [Inline])
+      | HorizontalRule()
+      | Table([Inline], [Alignment], [Double], [TableCell], [[TableCell]])
+      | Div(Attr, [Block])
+      | Null()
+</code></pre>
+<p>Here our single block is a paragraph:</p>
+<pre><code>&gt;&gt;&gt; para = blocks[0]
+&gt;&gt;&gt; para
+Para([Str('Hello,'), Space(), Str('World!')])
+&gt;&gt;&gt; isinstance(para, Para)
+True
+</code></pre>
+<p>In general, paragraphs contain lists of inline elements:</p>
+<pre><code>&gt;&gt;&gt; Para
+Para([Inline])
+&gt;&gt;&gt; inlines = para[0]
+</code></pre>
+<p>Inlines can be several things: ordinary text, emphasized text,
+strong text, etc.</p>
+<pre><code>&gt;&gt;&gt; Inline
+Inline = Str(Text)
+       | Emph([Inline])
+       | Strong([Inline])
+       | Strikeout([Inline])
+       | Superscript([Inline])
+       | Subscript([Inline])
+       | SmallCaps([Inline])
+       | Quoted(QuoteType, [Inline])
+       | Cite([Citation], [Inline])
+       | Code(Attr, Text)
+       | Space()
+       | SoftBreak()
+       | LineBreak()
+       | Math(MathType, Text)
+       | RawInline(Format, Text)
+       | Link(Attr, [Inline], Target)
+       | Image(Attr, [Inline], Target)
+       | Note([Block])
+       | Span(Attr, [Inline])
+</code></pre>
+<p>Here we simply have a mixture of ordinary text and space.</p>
+<pre><code>&gt;&gt;&gt; inlines = para[0]
+&gt;&gt;&gt; inlines
+[Str('Hello,'), Space(), Str('World!')]
+</code></pre>
+<p>Instances of <code>Space</code> have no argument while instances of <code>Str</code> 
+contain a text Text</p>
+<pre><code>&gt;&gt;&gt; Space
+Space()
+&gt;&gt;&gt; Str
+Str(Text)
+&gt;&gt;&gt; Text == type(u"")
+True
+</code></pre>
+<p>Finally</p>
+<pre><code>&gt;&gt;&gt; print(inlines[0][0] + " " + inlines[2][0])
+Hello, World!
+</code></pre>
+<h2 id="helpers">Helpers<a class="headerlink" href="#helpers" title="Permanent link">&para;</a></h2>
+<p>We introduce the helper function <code>show</code> to display a document or document 
+fragment (inline or block) as markdown:</p>
+<pre><code>&gt;&gt;&gt; def show(elt):
+...     if isinstance(elt, Pandoc):
+...         doc = elt
+...         print(pandoc.write(doc, format="markdown"))
+...     elif isinstance(elt, list):
+...         elts = elt
+...         if len(elts) &gt; 0:
+...             if isinstance(elts[0], Block):
+...                 blocks = elts
+...                 show(Pandoc(Meta({}), blocks))
+...             elif isinstance(elts[0], Inline):
+...                 inlines = elts
+...                 block = Plain(elts)
+...                 show([block])
+...     elif isinstance(elt, (Inline, Block)):
+...         show([elt])
+</code></pre>
+<p>We also introduce a function <code>find</code> to get the first element of a given type
+in a document or document fragment:</p>
+<pre><code>&gt;&gt;&gt; def find(elt, type):
+...     for _elt in pandoc.iter(elt):
+...         if isinstance(_elt, type):
+...             return _elt
+</code></pre>
+<p>We monkey-patch the base class for pandoc types to be able to call <code>find</code> 
+as a method:</p>
+<pre><code>&gt;&gt;&gt; pandoc.types.Type.find = find
+</code></pre>
+<h2 id="paragraphs">Paragraphs<a class="headerlink" href="#paragraphs" title="Permanent link">&para;</a></h2>
+<h2 id="headers">Headers<a class="headerlink" href="#headers" title="Permanent link">&para;</a></h2>
+<h2 id="quotations">Quotations<a class="headerlink" href="#quotations" title="Permanent link">&para;</a></h2>
+<h2 id="code-blocks">Code Blocks<a class="headerlink" href="#code-blocks" title="Permanent link">&para;</a></h2>
+<h2 id="line-blocks">Line Blocks<a class="headerlink" href="#line-blocks" title="Permanent link">&para;</a></h2>
+<h2 id="lists">Lists<a class="headerlink" href="#lists" title="Permanent link">&para;</a></h2>
+<h2 id="horizontal-rules">Horizontal Rules<a class="headerlink" href="#horizontal-rules" title="Permanent link">&para;</a></h2>
+<h2 id="tables">Tables<a class="headerlink" href="#tables" title="Permanent link">&para;</a></h2>
+<p><strong>Reference:</strong> <a href="https://pandoc.org/MANUAL.html#tables">Pandoc User's Guide / Tables</a></p>
+<p>Simple tables in markdown typically look like this:</p>
+<pre><code>&gt;&gt;&gt; text = """
+...   Right     Left     Center     Default
+... -------     ------ ----------   -------
+...      12     12        12            12
+...     123     123       123          123
+...       1     1          1             1
+... ---------------------------------------
+...
+... Table: Demonstration of simple table syntax.
+... """
+</code></pre>
+<p>A table is defined by 5 arguments:</p>
+<pre><code>&gt;&gt;&gt; Table
+Table([Inline], [Alignment], [Double], [TableCell], [[TableCell]])
+</code></pre>
+<p>They define respectively the table caption, column alignments, column widths,
+headers and rows. The most important are the last two, headers and rows.
+Headers are described by a list of table cells: it's the content of 
+first table row. The last argument refers to the remaining table rows,
+each row being described as a list of table cells.</p>
+<p>The content of a table cell can be arbitrarily complex: 
+anything that can be used in a document content (except for the metadata) 
+can be used in a table cell.
+Actually, <code>TableCell</code> is not a new type, but an alias for "list of blocks":</p>
+<pre><code>&gt;&gt;&gt; TableCell
+TableCell = [Block]
+</code></pre>
+<p>Let's have a look at the attributes of the table above:</p>
+<pre><code>&gt;&gt;&gt; doc = pandoc.read(text)
+&gt;&gt;&gt; table = doc.find(Table)
+&gt;&gt;&gt; caption, alignments, widths, headers, rows = table[:]
+</code></pre>
+<p>Here are the column headers:</p>
+<pre><code>&gt;&gt;&gt; headers
+[[Plain([Str('Right')])], [Plain([Str('Left')])], [Plain([Str('Center')])], [Plain([Str('Default')])]]
+&gt;&gt;&gt; for cell in headers:
+...     show(cell)
+Right
+&lt;BLANKLINE&gt;
+Left
+&lt;BLANKLINE&gt;
+Center
+&lt;BLANKLINE&gt;
+Default
+&lt;BLANKLINE&gt;
+</code></pre>
+<p>The structure of rows are similar. 
+For example, we can display the contents of the first row:</p>
+<pre><code>&gt;&gt;&gt; rows
+[[[Plain([Str('12')])], [Plain([Str('12')])], [Plain([Str('12')])], [Plain([Str('12')])]], [[Plain([Str('123')])], [Plain([Str('123')])], [Plain([Str('123')])], [Plain([Str('123')])]], [[Plain([Str('1')])], [Plain([Str('1')])], [Plain([Str('1')])], [Plain([Str('1')])]]]
+&gt;&gt;&gt; first_row = rows[0]
+&gt;&gt;&gt; for cell in first_row:
+...     show(cell)
+12
+&lt;BLANKLINE&gt;
+12
+&lt;BLANKLINE&gt;
+12
+&lt;BLANKLINE&gt;
+12
+&lt;BLANKLINE&gt;
+</code></pre>
+<p>The three other table arguments are caption, column alignments and column widths.
+Caption is the obvious one: it's the content of the (optional) table caption,
+described as a list of inlines:</p>
+<pre><code>&gt;&gt;&gt; caption
+[Str('Demonstration'), Space(), Str('of'), Space(), Str('simple'), Space(), Str('table'), Space(), Str('syntax.')]
+</code></pre>
+<p>Column alignments is a list of alignment options, 
+among the four possible choices below:</p>
+<pre><code>&gt;&gt;&gt; Alignment
+Alignment = AlignLeft()
+          | AlignRight()
+          | AlignCenter()
+          | AlignDefault()
+</code></pre>
+<p>In the current table, the four kinds are effectively used:</p>
+<pre><code>&gt;&gt;&gt; alignments
+[AlignRight(), AlignLeft(), AlignCenter(), AlignDefault()]
+</code></pre>
+<p>The third argument is a list of floating-point numbers which are 
+fractions of 1 and determine the column widths. 
+Either their sum is one of they are all set to zero, 
+in which vase the attribute carries no information. 
+Here, we are in this default case:</p>
+<pre><code>&gt;&gt;&gt; widths
+[0.0, 0.0, 0.0, 0.0]
+</code></pre>
+<p>Column widths are relevant in the context of multiline tables
+(see <a href="https://pandoc.org/MANUAL.html#tables">Pandoc User's Guide / Tables</a>)
+that look like this:</p>
+<pre><code>&gt;&gt;&gt; text = """
+... -------------------------------------------------------------
+...  Centered   Default           Right Left
+...   Header    Aligned         Aligned Aligned
+... ----------- ------- --------------- -------------------------
+...    First    row                12.0 Example of a row that
+...                                     spans multiple lines.
+... 
+...   Second    row                 5.0 Here's another one. Note
+...                                     the blank line between
+...                                     rows.
+... -------------------------------------------------------------
+... 
+... Table: Here's the caption. It, too, may span
+... multiple lines.
+... """
+</code></pre>
+<p>For this multiline table, the table parser computes the relative column widths:</p>
+<pre><code>&gt;&gt;&gt; table = pandoc.read(text).find(Table)
+&gt;&gt;&gt; _, _, widths, _, _ = table[:]
+&gt;&gt;&gt; widths
+[0.16666666666666666, 0.1111111111111111, 0.2222222222222222, 0.3611111111111111]
+</code></pre>
+<p>Now, since the last column has a lot of content and the third one 
+has plenty of empty space, we could select relative widths to narrow 
+the third column and enlarge the last one. Here is how that looks:</p>
+<pre><code>&gt;&gt;&gt; table[2] = [1/6, 1/9, 1/9, 5/12] # the sum is 1.0
+&gt;&gt;&gt; show(table)
+  -------------------------------------------------------------
+   Centered   Default       Right Left Aligned
+    Header    Aligned     Aligned 
+  ----------- --------- --------- -----------------------------
+     First    row            12.0 Example of a row that spans
+                                  multiple lines.
+&lt;BLANKLINE&gt;
+    Second    row             5.0 Here's another one. Note the
+                                  blank line between rows.
+  -------------------------------------------------------------
+&lt;BLANKLINE&gt;
+  : Here's the caption. It, too, may span multiple lines.
+&lt;BLANKLINE&gt;
+</code></pre>
+<p>Of course, it is possible to create tables programmatically:</p>
+<div class="admonition note">
+<p class="admonition-title">Example: Multiplication Table</p>
+<p>We show how to build a multiplication table. 
+First, we decide the size of the table: 
+here we will compute products up to 5x5:</p>
+<pre><code>&gt;&gt;&gt; n = 5
+</code></pre>
+<p>We won't need any caption, are ok with the 
+default column alignments and don't specify explicitly
+the column widths:</p>
+<pre><code>&gt;&gt;&gt; caption = []
+&gt;&gt;&gt; alignments = n * [AlignDefault()]
+&gt;&gt;&gt; widths = n * [0.0]
+</code></pre>
+<p>Now, since the structure of a table cell in pandoc is so general, 
+it may be a bit cumbersome when the content is so simple.
+To ease this pain, we define a small <code>cell</code> function
+which creates a table cell that wraps some arbitrary 
+text-like content.</p>
+<pre><code>&gt;&gt;&gt; def cell(text):
+...     inline = Str(str(text))
+...     blocks = [Plain([inline])]
+...     return blocks
+</code></pre>
+<p>Now we may define the table headers</p>
+<pre><code>&gt;&gt;&gt; headers = [cell("x")]
+&gt;&gt;&gt; for j in range(1, n+1):
+...     headers.append(cell(j))
+</code></pre>
+<p>and rows</p>
+<pre><code>&gt;&gt;&gt; rows = []
+&gt;&gt;&gt; for i in range(1, n+1):
+...     row = [cell(i)]
+...     for j in range(1, n+1):
+...         row.append(cell(i * j))
+...     rows.append(row)
+</code></pre>
+<p>The final table is:</p>
+<pre><code>&gt;&gt;&gt; table = Table(caption, alignments, widths, headers, rows)
+&gt;&gt;&gt; show(table)
+  x   1   2    3    4    5
+  --- --- ---- ---- ---- ----
+  1   1   2    3    4    5
+  2   2   4    6    8    10
+  3   3   6    9    12   15
+  4   4   8    12   16   20
+  5   5   10   15   20   25
+&lt;BLANKLINE&gt;
+</code></pre>
+</div>
+<h2 id="inline-formatting">Inline Formatting<a class="headerlink" href="#inline-formatting" title="Permanent link">&para;</a></h2>
+<h2 id="latex-and-math">LaTeX and Math<a class="headerlink" href="#latex-and-math" title="Permanent link">&para;</a></h2>
+<h2 id="html">HTML<a class="headerlink" href="#html" title="Permanent link">&para;</a></h2>
+<h2 id="links">Links<a class="headerlink" href="#links" title="Permanent link">&para;</a></h2>
+<h2 id="images">Images<a class="headerlink" href="#images" title="Permanent link">&para;</a></h2>
+<h2 id="divs-and-spans">Divs and Spans<a class="headerlink" href="#divs-and-spans" title="Permanent link">&para;</a></h2>
+<h2 id="footnotes">Footnotes<a class="headerlink" href="#footnotes" title="Permanent link">&para;</a></h2>
+<h2 id="citations">Citations<a class="headerlink" href="#citations" title="Permanent link">&para;</a></h2>
+<h2 id="metadata">Metadata<a class="headerlink" href="#metadata" title="Permanent link">&para;</a></h2>
+<p><strong>Reference:</strong> <a href="https://pandoc.org/MANUAL.html#metadata-blocks">Pandoc User's Guide / Metadata Blocks</a></p>
+<p><strong>TODO.</strong> Start with document without metadata, then simple title and contents, 
+then more advanced metadata ... and finally YAML blocks?</p>
+<p><strong>TODO:</strong> specify use cases: use for custom templates, misc. configuration
+options (e.g. stylesheets, EPUB metadata, bibliography, etc.)</p>
+<pre><code>&gt;&gt;&gt; Meta
+Meta({Text: MetaValue})
+</code></pre>
+<p>...</p>
+<pre><code>&gt;&gt;&gt; MetaValue
+MetaValue = MetaMap({Text: MetaValue})
+          | MetaList([MetaValue])
+          | MetaBool(Bool)
+          | MetaString(Text)
+          | MetaInlines([Inline])
+          | MetaBlocks([Block])
+</code></pre>
+<p>...</p>
+<pre><code>&gt;&gt;&gt; text = """\
+... % Document Title
+... % Author One, Author Two
+... % Date
+... """
+</code></pre>
+<p>...</p>
+<pre><code>&gt;&gt;&gt; doc = pandoc.read(text)
+&gt;&gt;&gt; doc == \
+... Pandoc(
+...   Meta(map([
+...     ('date', MetaInlines([Str('Date')])), 
+...     ('author', MetaList([MetaInlines(
+...       [Str('Author'), Space(), Str('One,'), Space(), Str('Author'), Space(), Str('Two')])])), 
+...     ('title', MetaInlines([Str('Document'), Space(), Str('Title')]))
+...   ])), 
+...   []
+... )
+True
+</code></pre>
+<p>...</p>
+<pre><code>&gt;&gt;&gt; metadata = doc[0][0]
+&gt;&gt;&gt; metadata["title"]
+MetaInlines([Str('Document'), Space(), Str('Title')])
+&gt;&gt;&gt; metadata["author"]
+MetaList([MetaInlines([Str('Author'), Space(), Str('One,'), Space(), Str('Author'), Space(), Str('Two')])])
+&gt;&gt;&gt; metadata["date"]
+MetaInlines([Str('Date')])
+</code></pre>
+<p><strong>TODO:</strong> discuss simple vs general (YAML) syntax.</p>
+<p><strong>TODO:</strong> explain goals: simple doc metadata + "compiler" / template 
+directives + any kind of user-defined goals.</p>
+<p><strong>TODO:</strong> parsing: when MetaInlines, when MetaBlocks? Test stuff, read code.
+Also distinguish MetaString vs MetaInlines ... (ex: '42': there is no number
+type allowed in pandoc metadata).</p>
+<p><strong>TODO:</strong> check if order in maps is preserved in markdown to JSON repr
+(I think I remember it is not). Well, the <a href="http://yaml.org/spec/1.2/spec.html">spec</a>
+tells us mappings are not ordered, so we're good here. Apparently, there is
+a compact notation to represent ordered mappings as lists of unordered mappings
+with a single entry (OK, I can see how that plays: you just prefix every
+key with <code>-</code>)</p>
+<p><strong>Code Analysis.</strong></p>
+<p>Pandoc metadata reading code: 
+<a href="https://github.com/jgm/pandoc/blob/master/src/Text/Pandoc/Readers/Markdown.hs">Source on GitHub</a></p>
+<ul>
+<li>
+<p>handling is in the <code>yamlMetaBlock</code> function</p>
+</li>
+<li>
+<p>the YAML text to YAML structure is mostly delegated to the <a href="http://hackage.haskell.org/package/yaml-0.8.30/docs/Data-Yaml.html"><code>Data.YAML</code></a> library</p>
+</li>
+<li>
+<p>the translation from the <code>Data.YAML</code> YAML item representation to
+    the <code>Meta</code> stuff of pandoc is managed by <code>yamlToMeta</code>.
+    There everything is mostly simple and unsurprising
+    (maybe except for a little micro management of numbers, 
+    but well, ok: floats that are integers are "integerized").
+    The real deal is the management of strings, delegated to
+    <code>toMetaValue</code>. Note that only numbers (and NULL / empty) 
+    are returned as <code>MetaStrings</code>, strings are not.</p>
+</li>
+<li>
+<p><code>toMetaValue</code>: AFAICT: if the strings ends with a newline,
+    it's some blocks, otherwise it's some inline. The easiest
+    way to get some blocks is to use</p>
+</li>
+</ul>
+<p>So to get a block, you can use in particular any folded or literal style
+(see <a href="https://stackoverflow.com/questions/3790454/in-yaml-how-do-i-break-a-string-over-multiple-lines?utm_medium=organic&amp;utm_source=google_rich_qa&amp;utm_campaign=google_rich_qa">stack overflow</a>.
+Essentially folded won't remember the linebreak at all while the literal style
+will remember them as soft breaks.</p>
+<p>Nota: "normal" multiline strings won't get a newline so they won't be
+reconized as blocks. If they contain newlines, it will be recognized as
+a simple softbreak.</p>
+<p>Nota: adding a newline at the end of a quoted string does not trigger
+MetaBlocks. Why? Is it somehow in the spec of YAML that strip such strings?
+Well, ok, let's accept that at face value.</p>
+<hr />
+<p><strong>TODO:</strong> Nota: round-tripping is not stable here: start with say the YAML
+metadata block:</p>
+<pre><code>---
+a: '42'
+---
+</code></pre>
+<p>The stuff gets parsed as MetaInlines; but write it again (in standalone mode)
+and you get 42 without the quotes, that gets parsed as MetaString instead.
+So, well, if we end up with a sorta weakly typed representation, we should
+not worry too much since in some respect pandoc management of this metadata
+is kinda weak anyway.</p>
+<p><strong>OR</strong> you can argue that the behavior above is a bug. But actually, 
+there is no way to know what the original type was, no the arbitrary
+serialization can hardly be objected ... right?</p>
+<p><strong>Another round-tripping issue.</strong> MetaBlocks may be serialized without 
+as 'normal' strings, not blocks, 
+so if they are parsed again, they will be considered MetaInlines.
+This one suck badly and can be considered to be a bug.
+You need something like at least two blocks to be serialized as a block?
+I have to have a look at the markdown writer (but, well, it may be hidden
+in the YAML library code, not clear I can explicit the issue with pandoc's
+code only). There, the metadata if first converted to a JSON-like structure
+before being cast to YAML (search for <code>metaToJSON</code>). The JSON stuff knows
+shit about how the strings has been specified so this is where the stuff
+goes bad? Is the newline content somehow preserved in this translation at
+least? And is <code>jsonToYaml</code> taking that into account? Yeah, well 
+<code>jsonToYaml</code> is using literal stuff all right if there is a newline in
+the string. So the issue is above, to check that <code>metaToJSON</code> does its
+job properly ... the bug should be there.</p>
+<p>And <code>metaToJSON</code> is <a href="https://github.com/jgm/pandoc/blob/7e389cb3dbdc11126b9bdb6a7741a65e5a94a43e/src/Text/Pandoc/Writers/Shared.hs">here</a>.</p>
+<p>Well actually <code>blockListToMarkdown</code> and <code>blockToMarkdown</code> may be the functions
+to investigate. Is <code>blockListToMarkdown</code> missing a trailing newline (at least
+in the context of it use in <code>metaToJSON</code> ? Fuck, I cannot grok this code in
+reasonable time, just log an issue with the example.</p>
+<p><strong>TODO:</strong> to and from "naked" yaml / json ? Discuss ambiguity 
+(empty stuff essentially? Then we don't know if we have lists 
+or inlines or blocks, that's about it right?).</p>
+<p><strong>Pragmatic approach</strong> (without bugfix): cast everything to strings
+and promote to blocks if it contains (or ends with?) a newline?</p>
+<p>Shit: adding a linebreak to MetaBlocks serializes some shit?
+Like a <code>\</code> at the end of string (which is still not a block).</p>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../examples/" title="Examples" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Examples
+              </span>
+            </div>
+          </a>
+        
+        
+          <a href="../configuration/" title="Configuration" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Configuration
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        powered by
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
+        and
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs</a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
+      
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
